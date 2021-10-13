@@ -1,0 +1,158 @@
+@import "base.sass"
+
+main
+    display: grid
+    place-items: center 
+    height: 97vh
+
+.test
+    width: 100%
+    max-width: 1024px
+    min-height: 570px
+    margin: 0 auto
+    border: 5px solid $m-border
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1)
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    background: white
+    box-sizing: content-box
+
+    &__footer
+        padding: 15px 32px 23px
+        border-top: 1px solid $grey
+        width: 100%
+        
+        display: flex
+        justify-content: space-between
+        gap: 61px
+
+    &-progressbar
+        display: flex
+        flex-direction: column
+        gap: 13px
+        width: -moz-available
+        width: -webkit-fill-available
+
+        &__text
+            display: flex
+            gap: 9px
+            align-items: baseline
+
+        &__ready
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 14px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        &__percent
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: -2px;
+            text-align: left;
+            color: $purple
+            
+            &::after
+                content: "%"
+            
+        &__line
+            height: 8px
+            border-radius: 4px
+            background: $grey
+            position: relative
+
+            &-ready
+                background: $purple
+                    
+                height: 8px
+                border-radius: 4px
+
+                position: absolute
+                left: 0
+                top: 0
+
+
+    &__footer-btns
+        display: flex
+        gap: 16px
+
+        &>*
+            border-radius: 25px
+            cursor: pointer
+
+
+        .back-btn
+            display: grid
+            place-items: center
+            width: 50px
+            height: 50px
+            border: 1px solid $label-border
+
+        .next-btn
+            padding: 0 22px 0 36px
+            display: flex
+            gap: 8px
+            background: $purple
+            color: white
+            align-items: center
+
+
+
+.question
+    padding: 32px
+
+    &__title
+        font-size: 28px
+        font-style: normal
+        font-weight: 700
+        line-height: 33px
+        letter-spacing: 0em
+        text-align: left
+        margin-bottom: 29px
+
+    &__body form
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 23px 24px
+
+        input
+            display: none
+
+        .custom-radio
+            width: 100%
+            border: 1px solid $label-border
+            border-radius: 4px
+            padding: 14px 16px
+            display: flex
+            align-items: center
+            gap: 13px
+
+            svg
+                width: 22px
+                display: grid
+                place-items: center
+
+            &__text
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 19px;
+                letter-spacing: 0em;
+                text-align: left;
+
+
+
+        input + label .checked
+            display: none
+
+        input:checked + label .checked
+            display: block
+        input:checked + label .not-checked
+            display: none
+
+
+

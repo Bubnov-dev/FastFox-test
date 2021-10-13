@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+/* Экраны */
+
+/* Цвета */
+
+/* fonts */
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background: #fafafa;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  height: 97vh;
+}
+
+.test {
+  width: 100%;
+  max-width: 1024px;
+  min-height: 570px;
+  margin: 0 auto;
+  border: 5px solid #e6e6e6;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.test__footer {
+  padding: 15px 32px 23px;
+  border-top: 1px solid #e8e8e8;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 61px;
+}
+
+.test-progressbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 13px;
+  width: -moz-available;
+  width: -webkit-fill-available;
+}
+
+.test-progressbar__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 9px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.test-progressbar__ready {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.test-progressbar__percent {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: -2px;
+  text-align: left;
+  color: #7B00D4;
+}
+
+.test-progressbar__percent::after {
+  content: "%";
+}
+
+.test-progressbar__line {
+  height: 8px;
+  border-radius: 4px;
+  background: #e8e8e8;
+  position: relative;
+}
+
+.test-progressbar__line-ready {
+  background: #7B00D4;
+  height: 8px;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.test__footer-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+.test__footer-btns > * {
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.test__footer-btns .back-btn {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #D9D8E6;
+}
+
+.test__footer-btns .next-btn {
+  padding: 0 22px 0 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  background: #7B00D4;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.question {
+  padding: 32px;
+}
+
+.question__title {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 29px;
+}
+
+.question__body form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 23px 24px;
+}
+
+.question__body form input {
+  display: none;
+}
+
+.question__body form .custom-radio {
+  width: 100%;
+  border: 1px solid #D9D8E6;
+  border-radius: 4px;
+  padding: 14px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 13px;
+}
+
+.question__body form .custom-radio svg {
+  width: 22px;
+  display: grid;
+  place-items: center;
+}
+
+.question__body form .custom-radio__text {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.question__body form input + label .checked {
+  display: none;
+}
+
+.question__body form input:checked + label .checked {
+  display: block;
+}
+
+.question__body form input:checked + label .not-checked {
+  display: none;
+}
+@supports (-webkit-appearance:none){
+
+}
