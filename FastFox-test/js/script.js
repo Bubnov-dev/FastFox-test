@@ -10,7 +10,6 @@ $(document).ready(function () {
 
 
     function backQuestion(){
-        console.log(question)
         if (question>0){
             question --;
             nextBtn.removeClass("disable")
@@ -92,7 +91,6 @@ $(document).ready(function () {
     });
 
     questions.each(() => {
-        console.log($(this))
         let localQuestion = $(this);
         $('input:checkBox').on('change', function () {
             nextBtn.removeClass("disable")
