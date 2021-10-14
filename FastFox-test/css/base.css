@@ -9,6 +9,8 @@
 body {
   font-family: 'Rubik', sans-serif;
   background: #fafafa;
+  margin: 0;
+  padding: 0;
 }
 
 * {
@@ -17,8 +19,22 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background: white;
+  }
 }
 @supports (-webkit-appearance:none){
+
+}
+
+ @media screen and (max-width: 768px){
+
+@supports (-webkit-appearance:none){
+
+}
 
 }

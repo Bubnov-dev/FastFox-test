@@ -4,9 +4,12 @@ main
     display: grid
     place-items: center 
     height: 97vh
+    @media screen and ( max-width: $mobile )
+        height: unset
+    
 
 .test
-    width: 100%
+    width: 90%
     max-width: 1024px
     min-height: 570px
     margin: 0 auto
@@ -18,6 +21,15 @@ main
     background: white
     box-sizing: content-box
 
+    @media screen and ( max-width: $mobile )
+        width: 100vw
+        border: none;
+        min-height: unset
+        box-shadow: none
+
+
+
+
     &__footer
         padding: 15px 32px 23px
         border-top: 1px solid $grey
@@ -26,6 +38,11 @@ main
         display: flex
         justify-content: space-between
         gap: 61px
+        @media screen and ( max-width: $mobile )
+            flex-direction: column
+            gap: 15px
+
+            padding: 10px 15px 10px
 
     &-progressbar
         display: flex
@@ -74,11 +91,12 @@ main
                 position: absolute
                 left: 0
                 top: 0
-
-
+                transition: .3s
+    
     &__footer-btns
         display: flex
         gap: 16px
+
 
         &>*
             border-radius: 25px
@@ -99,11 +117,45 @@ main
             background: $purple
             color: white
             align-items: center
+            border: 1px solid transparent
 
+
+        &>*.disable
+            background: $grey
+            cursor: context-menu
+            border: 1px solid transparent
+            svg path
+                fill: white
+
+    &__result
+        margin: auto
+        text-align: center
+        display: flex
+        flex-direction: column
+        justify-content: center
+        min-height: 200px
+        gap: 12px
+
+        &-main-text
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 33px;
+            letter-spacing: 0em;
+
+        &-end
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+            letter-spacing: 0em;
 
 
 .question
     padding: 32px
+
+    @media screen and ( max-width: $mobile )
+        padding: 20px 15px 20px
 
     &__title
         font-size: 28px
@@ -114,10 +166,43 @@ main
         text-align: left
         margin-bottom: 29px
 
+        display: flex
+        flex-direction: column
+        gap: 13px
+
+        @media screen and ( max-width: $mobile )
+            font-size: 25px
+            line-height: 28px
+
+    &__checkboxes-info
+        padding: 5px 12px 6px
+        background: $purple
+        border: 1px solid $purple-border;
+        box-sizing: border-box;
+        border-radius: 4px;
+        color: white
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-align: left;
+        width: fit-content
+
+        display: none
+    
+    &--with-checkboxes .question__checkboxes-info
+        display: block
+
+
+
     &__body form
         display: grid
         grid-template-columns: 1fr 1fr
         gap: 23px 24px
+
+        @media screen and ( max-width: $mobile )
+            grid-template-columns: 100%
 
         input
             display: none

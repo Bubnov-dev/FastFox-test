@@ -9,16 +9,22 @@ $grey: #e8e8e8
 $back: #fafafa
 $m-border: #e6e6e6
 $purple: #7B00D4
+$purple-border: #7B00D4
 $label-border: #D9D8E6
 
 /* fonts */
 body
     font-family: 'Rubik', sans-serif
     background: $back
+    margin: 0
+    padding: 0
+
+    @media screen and ( max-width: $mobile )
+        background: white
 
 
 *
     box-sizing: border-box
 
 .hidden
-    display: none
+    display: none !important
