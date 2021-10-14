@@ -47,12 +47,10 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   background: white;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
 }
 
 .test__footer {
-  padding: 15px 32px 23px;
+  padding: 15px 27px 18px;
   border-top: 1px solid #e8e8e8;
   width: 100%;
   display: -webkit-box;
@@ -81,7 +79,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 9px;
+  gap: 7px;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
@@ -101,7 +99,7 @@ main {
   font-style: normal;
   font-weight: 400;
   line-height: 19px;
-  letter-spacing: -2px;
+  letter-spacing: 0px;
   text-align: left;
   color: #7B00D4;
 }
@@ -207,7 +205,7 @@ main {
 }
 
 .question {
-  padding: 32px;
+  padding: 27px;
 }
 
 .question__title {
@@ -217,7 +215,7 @@ main {
   line-height: 33px;
   letter-spacing: 0em;
   text-align: left;
-  margin-bottom: 29px;
+  margin-bottom: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,13 +244,19 @@ main {
   width: -moz-fit-content;
   width: fit-content;
   display: none;
+  margin-bottom: 2px;
 }
 
 .question--with-checkboxes .question__checkboxes-info {
   display: block;
 }
 
+.question__body {
+  border: 1px solid transparent;
+}
+
 .question__body form {
+  margin-top: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 23px 24px;
@@ -291,15 +295,15 @@ main {
   text-align: left;
 }
 
-.question__body form input + label .checked {
+.question__body input + label .checked {
   display: none;
 }
 
-.question__body form input:checked + label .checked {
+.question__body input:checked + label .checked {
   display: block;
 }
 
-.question__body form input:checked + label .not-checked {
+.question__body input:checked + label .not-checked {
   display: none;
 }
 

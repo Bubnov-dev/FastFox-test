@@ -19,7 +19,6 @@ main
     justify-content: space-between
     flex-direction: column
     background: white
-    box-sizing: content-box
 
     @media screen and ( max-width: $mobile )
         width: 100vw
@@ -31,7 +30,7 @@ main
 
 
     &__footer
-        padding: 15px 32px 23px
+        padding: 15px 27px 18px
         border-top: 1px solid $grey
         width: 100%
         
@@ -53,7 +52,7 @@ main
 
         &__text
             display: flex
-            gap: 9px
+            gap: 7px
             align-items: baseline
 
         &__ready
@@ -69,7 +68,7 @@ main
             font-style: normal;
             font-weight: 400;
             line-height: 19px;
-            letter-spacing: -2px;
+            letter-spacing: 0px;
             text-align: left;
             color: $purple
             
@@ -152,7 +151,7 @@ main
 
 
 .question
-    padding: 32px
+    padding: 27px
 
     @media screen and ( max-width: $mobile )
         padding: 20px 15px 20px
@@ -164,7 +163,7 @@ main
         line-height: 33px
         letter-spacing: 0em
         text-align: left
-        margin-bottom: 29px
+        margin-bottom: 13px
 
         display: flex
         flex-direction: column
@@ -190,44 +189,48 @@ main
         width: fit-content
 
         display: none
+        margin-bottom: 2px
     
     &--with-checkboxes .question__checkboxes-info
         display: block
 
 
 
-    &__body form
-        display: grid
-        grid-template-columns: 1fr 1fr
-        gap: 23px 24px
+    &__body
+        border: 1px solid transparent
+        form
+            margin-top: 15px
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 23px 24px
 
-        @media screen and ( max-width: $mobile )
-            grid-template-columns: 100%
+            @media screen and ( max-width: $mobile )
+                grid-template-columns: 100%
 
-        input
-            display: none
+            input
+                display: none
 
-        .custom-radio
-            width: 100%
-            border: 1px solid $label-border
-            border-radius: 4px
-            padding: 14px 16px
-            display: flex
-            align-items: center
-            gap: 13px
+            .custom-radio
+                width: 100%
+                border: 1px solid $label-border
+                border-radius: 4px
+                padding: 14px 16px
+                display: flex
+                align-items: center
+                gap: 13px
 
-            svg
-                width: 22px
-                display: grid
-                place-items: center
+                svg
+                    width: 22px
+                    display: grid
+                    place-items: center
 
-            &__text
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 19px;
-                letter-spacing: 0em;
-                text-align: left;
+                &__text
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 19px;
+                    letter-spacing: 0em;
+                    text-align: left;
 
 
 
