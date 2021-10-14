@@ -317,7 +317,7 @@ main {
   }
 
   .test {
-    width: 100vw;
+    width: 100%;
     border: none;
     min-height: unset;
     -webkit-box-shadow: none;
